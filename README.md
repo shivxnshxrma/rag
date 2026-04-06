@@ -62,7 +62,7 @@ User Query → MiniLM Embedding → Cosine Search → Top-k Chunks
 ```bash
 # 1. Clone the repo
 git clone https://github.com/shivxnshxrma/DocuMind.git
-cd documind-study
+cd DocuMind
 
 # 2. Create and activate virtual environment
 python -m venv venv
