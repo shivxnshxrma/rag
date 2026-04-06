@@ -154,15 +154,6 @@ google-generativeai
 
 ---
 
-## Author
-
-**Shivansh** — Roll No. 00214004424
-B.Tech Computer Science & IT
-
-Supervised by **Dr. Manjot Kaur Bhatia**
-
----
-
 ## License
 
 MIT License — free to use, modify, and distribute.
