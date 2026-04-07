@@ -37,8 +37,23 @@ html, body, [class*="css"] {
     background-color: #0d0d0d;
     color: #e8e4dc;
 }
-#MainMenu, footer, header { visibility: hidden; }
+#MainMenu, footer, header 
 .block-container { padding-top: 2rem; padding-bottom: 2rem; }
+
+/* Always show sidebar toggle arrow — fixes disappearing collapse button */
+[data-testid="collapsedControl"] {
+    display: flex !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    background-color: #1a1a1a !important;
+    border: 1px solid #2a2a2a !important;
+    border-radius: 0 6px 6px 0 !important;
+    color: #c9a96e !important;
+}
+[data-testid="collapsedControl"]:hover {
+    background-color: #c9a96e !important;
+    color: #0d0d0d !important;
+}
 
 .hero-title {
     font-family: 'Syne', sans-serif;
