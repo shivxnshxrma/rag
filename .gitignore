@@ -76,6 +76,7 @@ coverage.xml
 
 .env
 .env.*
+.documind_state.json
 
 # mypy
 
@@ -119,6 +120,7 @@ Thumbs.db
 # Qdrant local storage (if using local mode)
 
 qdrant_storage/
+.documind_state.json
 
 # Temporary files
 

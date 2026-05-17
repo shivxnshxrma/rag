@@ -12,14 +12,15 @@
 
 ## What is DocuMind Study?
 
-DocuMind Study is a Retrieval-Augmented Generation (RAG) application that turns your static PDF notes into a complete AI-powered study system. Upload your textbooks or lecture notes once — and instantly get:
+DocuMind Study is a Retrieval-Augmented Generation (RAG) app that turns your static PDF notes into a complete AI-powered study system. Upload your textbooks or lecture notes once — and instantly get:
 
-- 💬 **Chat** — Ask anything, get answers grounded in your own documents with page citations
-- 📝 **Auto Quiz** — One-click MCQ generation with scoring and per-question explanations
-- 🗂 **Flashcards** — Auto-generated term → definition cards with flip, shuffle & navigation
-- 📖 **Summariser** — Focused, exam-ready topic summaries pulled from your notes
+- 💬 **Chat** — Ask anything, get answers grounded in your uploaded PDFs with page-range targeting and source citations
+- 📝 **Auto Quiz** — Generate adaptive MCQs with Beginner / Exam / Advanced difficulty and knowledge-gap tracking
+- 🗂 **Flashcards** — Auto-generated study cards with flip, shuffle, and persistent progress across reloads
+- 📖 **Summariser** — Topic or document summaries with page-aware source coverage and confidence indicators
+- 🧭 **Study Lab** — latest quiz score, weak-topic tracking, study plan generator, concept map creator, and exportable packs
 
-Every output is traceable to the exact source document and page number.
+Every output is traceable to the exact source document and page number, and app state persists in `.documind_state.json`.
 
 ---
 
@@ -110,17 +111,20 @@ documind-study/
 ### 📝 Quiz Generator
 - Choose a topic (or leave blank for a general quiz)
 - Select 5, 8, or 10 questions
-- After submission: score, percentage, progress bar, and colour-coded per-question feedback with explanations
+- Pick Beginner, Exam, or Advanced difficulty
+- Use Adaptive mode to focus on your weakest topics from past quizzes
+- After submission: score, percentage, progress bar, and knowledge-gap insights with per-question feedback
 
 ### 🗂 Flashcards
 - Auto-generates term → definition pairs from your notes
+- Supports page-range targeting for chapter-specific decks
 - Flip cards to reveal definitions
-- Navigate forward/backward, shuffle the deck, track progress
+- Navigate forward/backward, shuffle the deck, and preserve cards across reloads
 
 ### 📖 Topic Summariser
-- Type any topic covered in your notes
-- Get a concise, exam-ready summary synthesised from your documents
-- Source citations shown below every summary
+- Summarise a topic, chapter, or the whole document
+- Supports page ranges like `12-18`
+- Shows source confidence and page-level source snippets
 
 ---
 
@@ -137,6 +141,8 @@ langchain-community
 sentence-transformers
 pypdf
 google-generativeai
+python-dotenv
+reportlab
 ```
 
 ---

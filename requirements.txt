@@ -8,3 +8,5 @@ langchain-community
 sentence-transformers
 pypdf
 google-generativeai
+python-dotenv
+reportlab
